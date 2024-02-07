@@ -12,8 +12,7 @@ orgs.newOrg('eclipse-threadx') {
     packages_containers_internal: false,
     packages_containers_public: false,
     readers_can_create_discussions: true,
-    security_managers: [
-        "eclipsefdn-security",
+    security_managers+: [
         "tmp-threadx-msrc-vulnerabilities-transfer",
     ],
     two_factor_requirement: false,
