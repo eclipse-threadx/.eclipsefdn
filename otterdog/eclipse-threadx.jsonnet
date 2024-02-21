@@ -4,13 +4,7 @@ orgs.newOrg('eclipse-threadx') {
   settings+: {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
-    members_can_change_project_visibility: false,
-    members_can_change_repo_visibility: false,
-    members_can_create_teams: false,
-    members_can_delete_repositories: false,
     name: "Eclipse ThreadX",
-    packages_containers_internal: false,
-    packages_containers_public: false,
     readers_can_create_discussions: true,
     security_managers+: [
         "tmp-threadx-msrc-vulnerabilities-transfer",
@@ -58,7 +52,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
-      homepage: "http://learn.microsoft.com/azure/rtos/filex",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -157,7 +151,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_projects: false,
       has_wiki: false,
-      homepage: "http://learn.microsoft.com/azure/rtos/guix",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -213,7 +207,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_projects: false,
       has_wiki: false,
-      homepage: "https://learn.microsoft.com/azure/rtos/levelx",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/levelx/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -267,7 +261,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_projects: false,
       has_wiki: false,
-      homepage: "https://learn.microsoft.com/azure/rtos/netx-duo",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/netx-duo/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -346,7 +340,7 @@ orgs.newOrg('eclipse-threadx') {
       description: "Eclipse ThreadX is an advanced real-time operating system (RTOS) designed specifically for deeply embedded applications.",
       gh_pages_build_type: "workflow",
       has_projects: false,
-      homepage: "http://learn.microsoft.com/azure/rtos/threadx",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -437,7 +431,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: true,
       has_projects: false,
-      homepage: "http://learn.microsoft.com/azure/rtos/usbx",
+      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
