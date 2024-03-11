@@ -7,7 +7,7 @@ orgs.newOrg('eclipse-threadx') {
     name: "Eclipse ThreadX",
     readers_can_create_discussions: true,
     security_managers+: [
-        "tmp-threadx-msrc-vulnerabilities-transfer",
+      "tmp-threadx-msrc-vulnerabilities-transfer"
     ],
     two_factor_requirement: false,
     web_commit_signoff_required: false,
@@ -16,11 +16,15 @@ orgs.newOrg('eclipse-threadx') {
     },
   },
   _repositories+:: [
+    orgs.extendRepo('.eclipsefdn') {
+      private_vulnerability_reporting_enabled: true,
+    },
     orgs.newRepo('.github') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -30,6 +34,7 @@ orgs.newOrg('eclipse-threadx') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -53,6 +58,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -81,6 +87,7 @@ orgs.newOrg('eclipse-threadx') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://learn.microsoft.com/azure/iot-develop",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -152,6 +159,7 @@ orgs.newOrg('eclipse-threadx') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -208,6 +216,7 @@ orgs.newOrg('eclipse-threadx') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/levelx/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -262,6 +271,7 @@ orgs.newOrg('eclipse-threadx') {
       has_projects: false,
       has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/netx-duo/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -314,6 +324,7 @@ orgs.newOrg('eclipse-threadx') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -327,6 +338,7 @@ orgs.newOrg('eclipse-threadx') {
       has_projects: false,
       has_wiki: false,
       homepage: "",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -341,6 +353,7 @@ orgs.newOrg('eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -400,6 +413,7 @@ orgs.newOrg('eclipse-threadx') {
       has_issues: false,
       homepage: "",
       is_template: true,
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -408,6 +422,7 @@ orgs.newOrg('eclipse-threadx') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -432,6 +447,7 @@ orgs.newOrg('eclipse-threadx') {
       has_discussions: true,
       has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
+      private_vulnerability_reporting_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
