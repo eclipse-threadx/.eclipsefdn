@@ -5,7 +5,6 @@ orgs.newOrg('eclipse-threadx') {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse ThreadX",
-    readers_can_create_discussions: true,
     security_managers+: [
       "tmp-threadx-msrc-vulnerabilities-transfer"
     ],
