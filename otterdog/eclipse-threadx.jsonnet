@@ -8,7 +8,6 @@ orgs.newOrg('eclipse-threadx') {
     security_managers+: [
       "tmp-threadx-msrc-vulnerabilities-transfer"
     ],
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
