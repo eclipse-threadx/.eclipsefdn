@@ -125,7 +125,6 @@ orgs.newOrg('eclipse-threadx') {
         orgs.newBranchProtectionRule('master') {
           required_approving_review_count: null,
           required_status_checks+: [
-            "any:license/cla",
             "build (ubuntu-latest, Debug)",
             "build (ubuntu-latest, Release)",
             "build (windows-latest, Debug)",
