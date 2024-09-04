@@ -321,6 +321,8 @@ orgs.newOrg('eclipse-threadx') {
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('supported-platforms') {
+    },
     orgs.newRepo('threadx') {
       allow_merge_commit: true,
       allow_update_branch: false,
