@@ -321,6 +321,7 @@ orgs.newOrg('eclipse-threadx') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('rtos-docs-asciidoc') {
+      allow_forking: false,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
@@ -347,6 +348,7 @@ orgs.newOrg('eclipse-threadx') {
       ],
     },
     orgs.newRepo('rtos-docs-html') {
+      allow_forking: false,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
