@@ -41,6 +41,17 @@ orgs.newOrg('eclipse-threadx') {
         },
       ],
     },
+    orgs.newRepo('demo-repository') {
+      allow_forking: false,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      description: "A code repository designed to show the best GitHub has to offer.",
+      has_wiki: false,
+      private: true,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('filex') {
       allow_merge_commit: true,
       allow_update_branch: false,
