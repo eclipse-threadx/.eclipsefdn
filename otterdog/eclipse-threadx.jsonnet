@@ -4,9 +4,6 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
   settings+: {
     description: "",
     name: "Eclipse ThreadX",
-    security_managers+: [
-      "tmp-threadx-msrc-vulnerabilities-transfer"
-    ],
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
