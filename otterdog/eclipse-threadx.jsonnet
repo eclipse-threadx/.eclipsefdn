@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-threadx') {
+orgs.newOrg('iot.threadx', 'eclipse-threadx') {
   settings+: {
     description: "",
     name: "Eclipse ThreadX",
