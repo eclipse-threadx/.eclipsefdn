@@ -144,6 +144,35 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
         },
       ],
     },
+    orgs.newRepo('iot-devkit') {
+      allow_rebase_merge: false,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      description: "This guide is focused on the MXChip IoT DevKit (AZ3166).",
+      has_discussions: true,
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://threadx.io",
+      private_vulnerability_reporting_enabled: false,
+      topics+: [
+        "eclipse-threadx",
+        "iot",
+        "iot-device",
+        "iot-hub",
+        "mcu",
+        "microcontroller"
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: null,
+          requires_conversation_resolution: true,
+          requires_linear_history: true,
+          requires_pull_request: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
     orgs.newRepo('guix') {
       allow_merge_commit: true,
       allow_update_branch: false,
