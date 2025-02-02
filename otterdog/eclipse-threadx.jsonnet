@@ -347,7 +347,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('rtos-docs-asciidoc') {
-      allow_forking: false,
+      allow_forking: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
@@ -355,7 +355,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_alerts_enabled: false,
       description: "Source of the Eclipse ThreadX documentation in AsciiDoc format. Supersedes rtos-docs.",
       homepage: "https://threadx.io",
-      private: true,
+      private: false,
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "documentation",
@@ -374,7 +374,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
     },
     orgs.newRepo('rtos-docs-html') {
-      allow_forking: false,
+      allow_forking: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
@@ -382,7 +382,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_alerts_enabled: false,
       description: "Rendition of the Eclipse ThreadX documentation in HTML format. For website integration only.",
       homepage: "https://threadx.io",
-      private: true,
+      private: false,
       private_vulnerability_reporting_enabled: false,
       web_commit_signoff_required: false,
     },
