@@ -370,6 +370,11 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           restricts_pushes: true,
         },
       ],
+      secrets: [
+        orgs.newRepoSecret('DOCS_PUBLISH_TOKEN') {
+          value: "pass:bots/iot.threadx/github.com/docs-publish-token",
+        },
+      ],
     },
     orgs.newRepo('rtos-docs-html') {
       allow_merge_commit: true,
