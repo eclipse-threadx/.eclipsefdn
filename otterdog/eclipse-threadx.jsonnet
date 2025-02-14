@@ -1,5 +1,19 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
+local customRuleset(name) = 
+  orgs.newRepoRuleset(name) {
+    bypass_actors+: [
+      "@eclipse-threadx/iot-threadx-project-leads"
+    ],
+    include_refs+: [
+      std.format("refs/heads/%s", name),
+    ],
+    required_pull_request+: {
+      required_approving_review_count: 1,
+      requires_code_owner_review: true,
+    },
+  };
+
 orgs.newOrg('iot.threadx', 'eclipse-threadx') {
   settings+: {
     description: "",
@@ -64,6 +78,9 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
         "eclipse-threadx"
       ],
       web_commit_signoff_required: false,
+      rulesets: [
+        customRuleset('master'),
+      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -210,14 +227,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           secret: "********",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('master'),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -264,13 +275,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           secret: "********",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('master'),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -319,15 +325,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           secret: "********",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          blocks_creations: true,
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('master'),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -442,14 +441,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           value: "********",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('master'),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -478,14 +471,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('main'),
       ],
     },
     orgs.newRepo('usbx') {
@@ -527,14 +514,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           secret: "********",
         },
       ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true,
-          restricts_pushes: true,
-        },
+      rulesets: [
+        customRuleset('master'),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
