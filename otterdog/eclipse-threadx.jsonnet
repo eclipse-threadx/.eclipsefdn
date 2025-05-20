@@ -161,6 +161,18 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
         },
       ],
     },
+    orgs.newRepo('vulnerability-management') {
+      private: true,
+      allow_forking: false,
+      allow_update_branch: false,
+      has_issues: true,
+      has_discussions: false,
+      has_projects: true,
+      default_branch: "main",
+      dependabot_alerts_enabled: false,
+      description: "Private repository used to manage vulnerability-related tasks.",
+      private_vulnerability_reporting_enabled: false,
+    },
     orgs.newRepo('iot-devkit') {
       allow_rebase_merge: false,
       allow_update_branch: false,
