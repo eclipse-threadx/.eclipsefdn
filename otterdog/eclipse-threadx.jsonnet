@@ -355,6 +355,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('trustedx') {
       private: true,
+      allow_forking: false,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
