@@ -16,7 +16,9 @@ local customRuleset(name) =
 
 orgs.newOrg('iot.threadx', 'eclipse-threadx') {
   settings+: {
-    description: "",
+    description: "High-performance, real-time OS for deeply embedded and IoT applications.",
+    has_discussions: true,
+    discussion_source_repository: "eclipse-threadx/discussions",
     name: "Eclipse ThreadX",
     web_commit_signoff_required: false,
     workflows+: {
@@ -55,6 +57,35 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
         }
       ]
     },
+    orgs.newRepo('discussions') {
+      description: "Community discussion forum for Q&A, feedback, and announcements. Decisions by the project team are also documented here.",
+      homepage: "https://github.com/eclipse-threadx/discussions/discussions",
+      has_issues: false,
+      has_projects: false,
+      has_wiki: false,
+      has_discussions: true,
+      is_template: false,
+      topics+: [
+        "community",
+        "discussions"
+      ],
+      allow_merge_commit: false,
+      allow_squash_merge: false,
+      allow_rebase_merge: false,
+      allow_auto_merge: false,
+      delete_branch_on_merge: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          restricts_pushes: true,
+          push_restrictions+: [
+            "@eclipse-threadx/iot-threadx-project-leads"
+          ],
+          required_approving_review_count: 1,
+          requires_code_owner_reviews: true,
+          requires_conversation_resolution: true,
+        }
+      ],
+    },
     orgs.newRepo('filex') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -90,7 +121,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX GUIX Studio provides a complete, embedded graphical user interface (GUI) library and design environment, facilitating the creation and maintenance of all graphical elements needed by your device.",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
       private_vulnerability_reporting_enabled: true,
@@ -122,7 +153,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       default_branch: "main",
       delete_branch_on_merge: false,
       description: "This guide is focused on the MXChip IoT DevKit (AZ3166).",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://threadx.io",
       private_vulnerability_reporting_enabled: false,
@@ -152,7 +183,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX - LevelX Provides Flash Wear Leveling for FileX and Stand Alone purposes.",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/levelx/index.md",
@@ -186,7 +217,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX - NetXDuo is an advanced, industrial-grade TCP/IP network stack designed specifically for deeply embedded real-time and IoT applications",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/netx-duo/index.md",
@@ -221,7 +252,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Source of the Eclipse ThreadX documentation in AsciiDoc format. Supersedes rtos-docs.",
-      has_discussions: true,
+      has_discussions: false,
       homepage: "https://threadx.io",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -276,7 +307,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX samples and demos",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://threadx.io",
       private_vulnerability_reporting_enabled: true,
@@ -316,7 +347,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX is an advanced real-time operating system (RTOS) designed specifically for deeply embedded applications.",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
       private_vulnerability_reporting_enabled: true,
@@ -346,7 +377,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      has_discussions: true,
+      has_discussions: false,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       rulesets: [
@@ -363,7 +394,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Trustable Software Framework artefacts for Eclipse ThreadX and its companion components",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://threadxalliance.org",
       private_vulnerability_reporting_enabled: true,
@@ -398,7 +429,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ThreadX - USBX is a high-performance USB host, device, and on-the-go (OTG) embedded stack, that is fully integrated with Eclipse ThreadX RTOS",
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
       has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
       private_vulnerability_reporting_enabled: true,
