@@ -71,7 +71,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       allow_merge_commit: false,
       allow_squash_merge: false,
-      allow_rebase_merge: false,
+      allow_rebase_merge: true,
       allow_auto_merge: false,
       delete_branch_on_merge: false,
       branch_protection_rules: [
