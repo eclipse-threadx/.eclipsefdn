@@ -83,7 +83,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           required_approving_review_count: 1,
           requires_code_owner_reviews: true,
           requires_conversation_resolution: true,
-          require_commit_signing: true,
+          requires_commit_signatures: true,
           requires_strict_status_checks: true,
           required_status_checks+: [
             "Validate decision record format"
