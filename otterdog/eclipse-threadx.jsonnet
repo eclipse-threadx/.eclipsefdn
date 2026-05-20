@@ -70,8 +70,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
         "discussions"
       ],
       allow_merge_commit: false,
-      allow_squash_merge: false,
-      allow_rebase_merge: true,
+      allow_squash_merge: true,
+      allow_rebase_merge: false,
       allow_auto_merge: false,
       delete_branch_on_merge: false,
       branch_protection_rules: [
@@ -83,6 +83,11 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
           required_approving_review_count: 1,
           requires_code_owner_reviews: true,
           requires_conversation_resolution: true,
+          require_commit_signing: true,
+          requires_strict_status_checks: true,
+          required_status_checks+: [
+            "Validate decision record format"
+          ],
         }
       ],
     },
