@@ -93,6 +93,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('filex') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -101,6 +102,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -121,6 +123,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('guix') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -129,6 +132,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -183,6 +187,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('levelx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -217,6 +222,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('netxduo') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -307,6 +313,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('samplex') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "main",
       delete_branch_on_merge: false,
@@ -315,6 +322,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://threadx.io",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -347,6 +355,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('threadx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -355,6 +364,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -429,6 +439,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('usbx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -437,6 +448,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
