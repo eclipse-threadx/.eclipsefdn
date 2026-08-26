@@ -487,6 +487,41 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       description: "Private repository used to manage vulnerability-related tasks.",
       private_vulnerability_reporting_enabled: false
     },
+    orgs.newRepo('zonex') {
+      allow_merge_commit: true,
+      allow_squash_merge: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse ThreadX - ZoneX is a deterministic partitioning hypervisor for mixed-criticality embedded systems.",
+      gh_pages_build_type: "workflow",
+      has_discussions: false,
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://threadx.io",
+      private_vulnerability_reporting_enabled: true,
+      topics+: [
+        "eclipse-threadx",
+        "embedded",
+        "hypervisor",
+        "mixed-criticality",
+        "rtos",
+        "virtualization"
+      ],
+      web_commit_signoff_required: false,
+      rulesets: [
+        customRuleset('main')
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected"
+        }
+      ]
+    },
     // Archived repositories: Do not change settings.
     orgs.newRepo('getting-started') {
       archived: true,
