@@ -99,7 +99,8 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       description: "Eclipse ThreadX - FileX is a high-performance, FAT-compatible file system that’s fully integrated with Eclipse ThreadX RTOS",
       dependabot_security_updates_enabled: true,
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
+      has_projects: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -107,12 +108,12 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('main')
+        customRuleset('master')
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "main"
+            "master"
           ],
           deployment_branch_policy: "selected"
         }
@@ -141,12 +142,12 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('main')
+        customRuleset('master')
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "main"
+            "master"
           ],
           deployment_branch_policy: "selected"
         }
