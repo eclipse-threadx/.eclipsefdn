@@ -93,13 +93,16 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('filex') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Eclipse ThreadX - FileX is a high-performance, FAT-compatible file system that’s fully integrated with Eclipse ThreadX RTOS",
       dependabot_security_updates_enabled: true,
       gh_pages_build_type: "workflow",
-      has_discussions: true,
+      has_discussions: false,
+      has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -107,12 +110,12 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('main')
+        customRuleset('master')
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "main"
+            "master"
           ],
           deployment_branch_policy: "selected"
         }
@@ -120,6 +123,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('guix') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -128,6 +132,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -141,12 +146,12 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('main')
+        customRuleset('master')
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "main"
+            "master"
           ],
           deployment_branch_policy: "selected"
         }
@@ -182,6 +187,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('levelx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -216,6 +222,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('netxduo') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -306,6 +313,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('samplex') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "main",
       delete_branch_on_merge: false,
@@ -314,6 +322,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://threadx.io",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -346,6 +355,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('threadx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -354,6 +364,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -428,6 +439,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
     },
     orgs.newRepo('usbx') {
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -436,6 +448,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       gh_pages_build_type: "workflow",
       has_discussions: false,
       has_projects: false,
+      has_wiki: false,
       homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
       private_vulnerability_reporting_enabled: true,
       topics+: [
@@ -473,6 +486,41 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       dependabot_alerts_enabled: false,
       description: "Private repository used to manage vulnerability-related tasks.",
       private_vulnerability_reporting_enabled: false
+    },
+    orgs.newRepo('zonex') {
+      allow_merge_commit: true,
+      allow_squash_merge: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse ThreadX - ZoneX is a deterministic partitioning hypervisor for mixed-criticality embedded systems.",
+      gh_pages_build_type: "workflow",
+      has_discussions: false,
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://threadx.io",
+      private_vulnerability_reporting_enabled: true,
+      topics+: [
+        "eclipse-threadx",
+        "embedded",
+        "hypervisor",
+        "mixed-criticality",
+        "rtos",
+        "virtualization"
+      ],
+      web_commit_signoff_required: false,
+      rulesets: [
+        customRuleset('main')
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected"
+        }
+      ]
     },
     // Archived repositories: Do not change settings.
     orgs.newRepo('getting-started') {
