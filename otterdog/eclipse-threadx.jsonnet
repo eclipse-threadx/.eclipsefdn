@@ -39,24 +39,6 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false
     },
-    orgs.newRepo('cmsis-packs') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      has_discussions: true,
-      private_vulnerability_reporting_enabled: true,
-      web_commit_signoff_required: false,
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          dismisses_stale_reviews: true,
-          required_approving_review_count: 1,
-          requires_code_owner_reviews: true,
-          requires_conversation_resolution: true,
-          requires_strict_status_checks: true
-        }
-      ]
-    },
     orgs.newRepo('discussions') {
       description: "Community discussion forum for Q&A, feedback, and announcements. Decisions by the project team are also documented here.",
       homepage: "https://github.com/eclipse-threadx/discussions/discussions",
@@ -523,6 +505,27 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ]
     },
     // Archived repositories: Do not change settings.
+    orgs.newRepo('cmsis-packs') {
+      archived: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "ARCHIVED This repository packaged Azure RTOS ThreadX and its middleware for CMSIS-aware tools. Those packs were never actually published anywhere.",
+      has_discussions: true,
+      homepage: "",
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          dismisses_stale_reviews: true,
+          required_approving_review_count: 1,
+          requires_code_owner_reviews: true,
+          requires_conversation_resolution: true,
+          requires_strict_status_checks: true
+        }
+      ]
+    },
     orgs.newRepo('getting-started') {
       archived: true,
       allow_rebase_merge: false,
