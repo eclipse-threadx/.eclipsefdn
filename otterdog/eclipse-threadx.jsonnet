@@ -103,7 +103,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/filex/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx"
@@ -133,7 +133,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/guix/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx",
@@ -197,7 +197,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/levelx/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx",
@@ -232,7 +232,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/netx-duo/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx",
@@ -365,7 +365,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/threadx/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx",
@@ -449,7 +449,7 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       has_discussions: false,
       has_projects: false,
       has_wiki: false,
-      homepage: "https://github.com/eclipse-threadx/rtos-docs/blob/main/rtos-docs/usbx/index.md",
+      homepage: "https://threadx.io/releases/latest",
       private_vulnerability_reporting_enabled: true,
       topics+: [
         "eclipse-threadx",
