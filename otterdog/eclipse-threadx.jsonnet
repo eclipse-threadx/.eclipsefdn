@@ -14,6 +14,14 @@ local customRuleset(name) =
     }
   };
 
+// Require regression checks alongside the default legal check on dev.
+local devRegressionRuleset(checks) =
+  customRuleset('dev') {
+    required_status_checks+: {
+      status_checks+: checks
+    }
+  };
+
 orgs.newOrg('iot.threadx', 'eclipse-threadx') {
   settings+: {
     description: "High-performance, real-time OS for deeply embedded and IoT applications.",
@@ -92,7 +100,14 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('master')
+        customRuleset('master'),
+        // Dev enforcement waits for the Linux and Win64 workflow rollout.
+        devRegressionRuleset([
+          "run_tests / run_tests",
+          "win64",
+        ]) {
+          enforcement: "disabled",
+        },
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -128,7 +143,16 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('master')
+        customRuleset('master'),
+        // Dev enforcement waits for dev triggers and these distinct Studio job names.
+        devRegressionRuleset([
+          "guix / run_tests",
+          "GUIX Studio View",
+          "GUIX Studio Demo",
+          "GUIX Studio Demo Compile",
+        ]) {
+          enforcement: "disabled",
+        },
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -192,6 +216,12 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       web_commit_signoff_required: false,
       rulesets: [
         customRuleset('master'),
+        // Dev enforcement waits for the full regression workflow rollout.
+        devRegressionRuleset([
+          "run_tests / run_tests",
+        ]) {
+          enforcement: "disabled",
+        },
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -228,7 +258,10 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('master')
+        customRuleset('master'),
+        devRegressionRuleset([
+          "CI / dev gate",
+        ]),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -360,7 +393,13 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('master')
+        customRuleset('master'),
+        devRegressionRuleset([
+          "tx / run_tests",
+          "smp / run_tests",
+          "freertos / run_tests",
+          "riscv / run_tests",
+        ]),
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -446,7 +485,13 @@ orgs.newOrg('iot.threadx', 'eclipse-threadx') {
       ],
       web_commit_signoff_required: false,
       rulesets: [
-        customRuleset('master')
+        customRuleset('master'),
+        // Dev enforcement waits for automatic regression runs on dev.
+        devRegressionRuleset([
+          "auto_tests / run_tests",
+        ]) {
+          enforcement: "disabled",
+        },
       ],
       environments: [
         orgs.newEnvironment('github-pages') {
